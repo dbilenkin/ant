@@ -1,5 +1,21 @@
 .App {
   text-align: center;
+  display: flex;
+}
+
+.rule {
+  display: flex;
+  padding: 10px;
+}
+
+.ruleColor {
+  width: 20px;
+  height: 20px;
+  border: solid black 1px;
+}
+
+canvas {
+  border: solid 1px black;
 }
 
 .App-logo {
