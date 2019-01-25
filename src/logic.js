@@ -10,7 +10,9 @@ let c = {
   y: height / size / 2,
   d: "up"
 };
-let rules;
+
+let state;
+
 
 const initGrid = () => {
   for (let i = 0; i < height; i++) {
@@ -22,15 +24,16 @@ const initGrid = () => {
 };
 
 const go = () => {
+  if (!state.running) return;
   if (steps > 10000000) return;
   if (!grid[c.x] || !grid[c.x][c.y]) return;
   steps++;
   document.getElementById("steps").innerHTML = steps;
   // console.log(steps);
   const currentCell = grid[c.x][c.y];
-  const color = rules[currentCell].color;
+  const color = state.rules[currentCell].color;
   grid[c.x][c.y] = color;
-  const dir = rules[currentCell].dir;
+  const dir = state.rules[currentCell].dir;
   ctx.fillStyle = color;
   ctx.fillRect(c.x*size, c.y*size, size, size);
   if (c.d === "up") {
@@ -74,29 +77,32 @@ const go = () => {
   
 };
 
-const drawGrid = () => {
-  ctx.beginPath();
-  ctx.moveTo(0, 0);
-  for (let i = 0; i < height; i += size) {
-    ctx.moveTo(i, 0);
-    ctx.lineTo(i, height);
-  }
 
-  for (let j = 0; j < width; j += size) {
-    ctx.moveTo(0, j);
-    ctx.lineTo(width, j);
-  }
-  ctx.closePath();
-  ctx.fillStyle = "rgb(0,0,0,1)";
-  ctx.stroke();
-};
+const toggle = () => {
+  state.running = !state.running;
+  if (state.running) { 
+    go();
+  } 
+}
+
+const reset = (canvas) => {
+  state.running = false;
+  steps = 0;
+  initGrid();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  c = {
+    x: width / size / 2,
+    y: height / size / 2,
+    d: "up"
+  };
+}
 
 // drawGrid();
-const start = (_rules, _canvas) => {
+const start = (_state, _canvas) => {
   ctx = _canvas.getContext("2d");
-  rules = _rules;
+  state = _state;
   initGrid();
   go();
 }
 
-export default start;
+export { start, toggle, reset };

@@ -35,7 +35,8 @@ class App extends Component {
         dir: "left"
       }
     },
-    running: false
+    running: true,
+    speed: 100
   };
 
   componentDidMount() {}
@@ -46,14 +47,14 @@ class App extends Component {
     this.setState(state);
   }
 
-  pause = () => {
-
+  toggleRunning = () => {
+    this.setState({ running: !this.state.running });
   }
 
   render() {
     return (
       <div className="App">
-        <Grid rules={this.state.rules} running={this.state.running} />
+        <Grid state={this.state} toggleRunning={this.toggleRunning}/>
         <Rules toggle={this.toggle} rules={this.state.rules} />
       </div>
     );

@@ -1,10 +1,19 @@
 import React, { Component } from "react";
-import start from "../logic";
+import { start, toggle, reset, getSteps } from "../logic";
 
 class Grid extends Component {
+
   componentDidMount() {
-    const canvas = this.refs.canvas;
-    start(this.props.rules, canvas);
+    this.canvas = this.refs.canvas;
+    start(this.props.state, this.canvas);
+  }
+
+  toggleRunning = () => {
+    toggle();
+  }
+
+  resetCanvas = () => {
+    reset(this.canvas);
   }
 
   render() {
@@ -17,8 +26,8 @@ class Grid extends Component {
           </div>
           <canvas ref="canvas" width="500" height="500" />
         </div>
-        <button onClick={this.props.pause}>{this.props.startStopText}</button>
-        <button onClick={this.props.reset}>Reset</button>
+        <button onClick={this.toggleRunning}>Toggle</button>
+        <button onClick={this.resetCanvas}>Reset</button>
       </div>
     );
   }

@@ -5,7 +5,7 @@ const Rules = props => {
     <div className="Rules">
       <h1>Rules</h1>
       {Object.keys(props.rules).map(rule => (
-        <div className="rule">
+        <div className="rule" key={rule}>
           <div className="ruleColor" style={{backgroundColor: rule}}></div>
           <div onClick={() => props.toggle(rule)}>{props.rules[rule].dir}</div>
         </div>
