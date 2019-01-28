@@ -1,13 +1,16 @@
 {
-  "main.css": "/ant/static/css/main.99103aa9.chunk.css",
-  "main.js": "/ant/static/js/main.a3340230.chunk.js",
-  "main.js.map": "/ant/static/js/main.a3340230.chunk.js.map",
-  "static/js/1.5cb9b55e.chunk.js": "/ant/static/js/1.5cb9b55e.chunk.js",
-  "static/js/1.5cb9b55e.chunk.js.map": "/ant/static/js/1.5cb9b55e.chunk.js.map",
+  "main.css": "/ant/static/css/main.572a36df.chunk.css",
+  "main.js": "/ant/static/js/main.601bd93f.chunk.js",
+  "main.js.map": "/ant/static/js/main.601bd93f.chunk.js.map",
+  "static/css/1.9b952d61.chunk.css": "/ant/static/css/1.9b952d61.chunk.css",
+  "static/js/1.99283200.chunk.js": "/ant/static/js/1.99283200.chunk.js",
+  "static/js/1.99283200.chunk.js.map": "/ant/static/js/1.99283200.chunk.js.map",
   "runtime~main.js": "/ant/static/js/runtime~main.290c618b.js",
   "runtime~main.js.map": "/ant/static/js/runtime~main.290c618b.js.map",
-  "static/css/main.99103aa9.chunk.css.map": "/ant/static/css/main.99103aa9.chunk.css.map",
+  "static/media/semantic.min.css": "/ant/static/media/brand-icons.a1a749e8.svg",
+  "static/css/main.572a36df.chunk.css.map": "/ant/static/css/main.572a36df.chunk.css.map",
+  "static/css/1.9b952d61.chunk.css.map": "/ant/static/css/1.9b952d61.chunk.css.map",
   "index.html": "/ant/index.html",
-  "precache-manifest.5dda935236ce01e82fc111a9fc43ce8c.js": "/ant/precache-manifest.5dda935236ce01e82fc111a9fc43ce8c.js",
+  "precache-manifest.15db97a86829ebe8859549abb0ec36ae.js": "/ant/precache-manifest.15db97a86829ebe8859549abb0ec36ae.js",
   "service-worker.js": "/ant/service-worker.js"
 }
