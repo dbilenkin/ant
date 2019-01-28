@@ -1,21 +1,47 @@
+.container {
+  display: flex;
+  margin: auto;
+  width: 800px;
+  justify-content: space-evenly; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly; 
+}
+
 .App {
-  text-align: center;
+  margin: auto;
+  width: 850px;
+}
+
+.grid-card {
+  width: 600px !important;
+}
+
+.interaction {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.buttons {
   display: flex;
 }
 
-.rule {
+.sliders {
   display: flex;
-  padding: 10px;
+  flex-direction: column;
+}
+
+#add-rule {
+  cursor: pointer;
 }
 
 .ruleColor {
   width: 20px;
   height: 20px;
   border: solid black 1px;
-}
-
-canvas {
-  border: solid 1px black;
 }
 
 .App-logo {
